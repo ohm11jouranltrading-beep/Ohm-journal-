@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { onAuthChange } from "./firebase";
 import OhmAuth from "./ohm_auth_v6";
-import App from "./app_v35";
-import AdminPage from "./admin";
+import App from "./app_v35-1";
+import AdminPage from "./admin-1";
 
 const ADMIN_EMAILS = [
   "ohm.1.1jouranltrading@gmail.com",
