@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { db, logoutUser } from "./firebase";
+import { db, logoutUser } from "./firebase-1"
 import { collection, getDocs } from "firebase/firestore";
 
 const ADMIN_EMAILS = ["ohm.1.1jouranltrading@gmail.com"];
