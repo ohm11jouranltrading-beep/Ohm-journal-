@@ -731,7 +731,7 @@ export default function OhmAuth({ onLogin }) {
         </div>
         <Ticker/>
       </div>
-      {social && <SocialModal provider={social} onClose={()=>setSocial(null)}/>}
+  {false && <SocialModal provider={social} onClose={()=>setSocial(null)}/>}
     </>
   );
 }
