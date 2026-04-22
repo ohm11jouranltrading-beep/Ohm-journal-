@@ -696,18 +696,19 @@ export default function OhmAuth({ onLogin }) {
     setLEmail,setLPass,setShowLP,setRemMe,doLogin,
     goReg:()=>{go('register');setRegStep(0);},
     setSocialModal:setSocial,
-    doGoogleLogin: async ()=>{
-      setLoading(true);
-      try {
-        const user = await loginWithGoogle();
-        setLoading(false);
-        go('success');
-        if(onLogin) onLogin(user);
-      } catch(err) {
-        setLoading(false);
-        setErrors({pass:'فشل الدخول بـ Google: ' + (err.message||err.code||'')});
-      }
-    },
+doGoogleLogin: async()=>{
+  setLoading(true);
+  try{
+    const {loginWithGoogle}=await import('./firebase-1');
+    const user=await loginWithGoogle();
+    setLoading(false);
+    go('success');
+    if(onLogin) onLogin(user);
+  }catch(err){
+    setLoading(false);
+    setErrors({pass:'فشل الدخول بـ Google'});
+  }
+},
   };
   const regHandlers = {
     setRName,setREmail,setRPhone,setRPass,setRPassC,setShowRP,setShowRC,
