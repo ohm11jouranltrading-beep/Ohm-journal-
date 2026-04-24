@@ -1310,7 +1310,7 @@ function InfoTooltip({ id, children }) {
    APP
 ───────────────────────────────────────────────────────────── */
 export default function App() {
-  const [trades,    setTrades]  = useState(SAMPLE);
+  const [trades, setTrades] = useState([]);
   const [tab,       setTab]     = useState("dashboard");
   const [modal,     setModal]   = useState(false);
   const [selDay,    setSelDay]  = useState(null);
@@ -1414,7 +1414,7 @@ export default function App() {
         try{
           const data = await loadUserData(user.uid);
           if(data){
-            if(data.trades?.length) setTrades(data.trades);
+            if(data.trades) setTrades(data.trades);
             if(data.settings?.dark !== undefined) setDark(data.settings.dark);
             if(data.motivations?.length) setMyMotivations(data.motivations);
           }
