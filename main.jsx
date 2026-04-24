@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { onAuthChange } from "./firebase-1";
-import OhmAuth from "./ohm_auth_v6-1";
+import OhmAuth from "./ohm_auth_v6-2";
 import App from "./app_v35-2";
 import AdminPage from "./admin-1";
 
