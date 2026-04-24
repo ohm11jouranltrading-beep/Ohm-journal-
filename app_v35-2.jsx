@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useCallback, useRef, createContext, useContext } from "react";
-import { auth, db, loadUserData, saveTrades, saveSettings, saveMotivations, logoutUser, onAuthChange } from "./firebase";
+import { auth, db, loadUserData, saveTrades, saveSettings, saveMotivations, logoutUser, onAuthChange } from "./firebase-1";
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer, Cell, RadarChart, Radar, PolarGrid,
