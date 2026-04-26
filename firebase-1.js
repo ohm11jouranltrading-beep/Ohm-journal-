@@ -113,17 +113,17 @@ export async function loadUserData(uid) {
 
 /** حفظ بيانات الصفقات */
 export async function saveTrades(uid, trades) {
-  await updateDoc(doc(db, "users", uid), { trades });
+  await setDoc(doc(db, "users", uid), { trades }, { merge: true });
 }
 
 /** حفظ إعدادات المستخدم (الثيم، إلخ) */
 export async function saveSettings(uid, settings) {
-  await updateDoc(doc(db, "users", uid), { settings });
+  await setDoc(doc(db, "users", uid), { settings }, { merge: true });
 }
 
 /** حفظ الدوافع الشخصية */
 export async function saveMotivations(uid, motivations) {
-  await updateDoc(doc(db, "users", uid), { motivations });
+  await setDoc(doc(db, "users", uid), { motivations }, { merge: true });
 }
 
 /** مراقبة التغييرات في بيانات المستخدم في الوقت الفعلي */
