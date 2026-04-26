@@ -628,7 +628,7 @@ export default function AdminPage({user,onBack}){
             style={{width:"100%",background:"rgba(255,255,255,0.03)",border:"1px solid rgba(255,255,255,0.07)",borderRadius:10,padding:"9px 40px 9px 14px",color:"#fff",fontSize:13,fontFamily:"inherit"}}/>
         </div>
 
-        <div style={{display:"flex",gap:6"}}>
+        <div style={{display:"flex",gap:6}}>
           {[["score","⚡ Score"],["wr","🎯 WR"],["trades","📊 Trades"],["name","🔤 Name"]].map(([k,l])=>(
             <button key={k} className="btn-hover" onClick={()=>setSort(k)}
               style={{background:sort===k?"rgba(99,102,241,0.2)":"rgba(255,255,255,0.03)",color:sort===k?"#a5b4fc":"rgba(255,255,255,0.4)",border:`1px solid ${sort===k?"rgba(99,102,241,0.3)":"rgba(255,255,255,0.06)"}`,borderRadius:8,padding:"8px 14px",fontSize:12,fontWeight:600,fontFamily:"inherit",whiteSpace:"nowrap"}}>
